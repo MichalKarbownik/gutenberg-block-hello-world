@@ -117,7 +117,7 @@ registerBlockType('firstgutyblocks/hero-image', {
     save(props) {
 
         const { attributes, className } = props;
-        const { fontColor, backgroundImage } = props.attributes;
+        const { fontColor, overlayColor, backgroundImage } = props.attributes;
 
         return (
             <div
@@ -127,7 +127,10 @@ registerBlockType('firstgutyblocks/hero-image', {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
-                <div className="overlay"></div>
+                <div
+                    className="overlay"
+                    style={{ background: overlayColor }}
+                ></div>
                 <h2 class="content" style={{ color: fontColor }}>{attributes.textString}</h2>
             </div>
         );
