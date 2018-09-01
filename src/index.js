@@ -32,10 +32,9 @@ registerBlockType('firstgutyblocks/hero-image', {
 
         const {
             setAttributes,
-            attributes,
             className
         } = props;
-        const { fontColor, overlayColor, backgroundImage } = props.attributes;
+        const { textString, fontColor, overlayColor, backgroundImage } = props.attributes;
 
         function onTextChange(changes) {
             setAttributes({
@@ -100,12 +99,12 @@ registerBlockType('firstgutyblocks/hero-image', {
                 }}>
                 <div
                     className="overlay"
-                    style={{ background: overlayColor }}
-                ></div>
+                    style={{background: overlayColor}}
+                />
                 <RichText
                     tagName="h2"
                     className="content"
-                    value={attributes.textString}
+                    value={textString}
                     onChange={onTextChange}
                     placeholder="Enter your text here!"
                     style={{ color: fontColor }}
@@ -116,8 +115,8 @@ registerBlockType('firstgutyblocks/hero-image', {
 
     save(props) {
 
-        const { attributes, className } = props;
-        const { fontColor, overlayColor, backgroundImage } = props.attributes;
+        const { className } = props;
+        const { textString, fontColor, overlayColor, backgroundImage } = props.attributes;
 
         return (
             <div
@@ -129,9 +128,9 @@ registerBlockType('firstgutyblocks/hero-image', {
                 }}>
                 <div
                     className="overlay"
-                    style={{ background: overlayColor }}
-                ></div>
-                <h2 class="content" style={{ color: fontColor }}>{attributes.textString}</h2>
+                    style={{background: overlayColor}}
+                />
+                <h2 class="content" style={{ color: fontColor }}>{textString}</h2>
             </div>
         );
     }
