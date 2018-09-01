@@ -1,7 +1,5 @@
-const { 
-    registerBlockType,
-    RichText
-} = wp.blocks;
+const { registerBlockType } = wp.blocks;
+const { RichText } = wp.editor;
 
 registerBlockType('firstgutyblocks/hello-world', {
     title: "My First RichText Block!",
