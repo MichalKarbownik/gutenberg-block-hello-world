@@ -15,7 +15,7 @@ registerBlockType('firstgutyblocks/hero-image', {
         },
         fontColor: {
             type: 'string',
-            default: null // let's get rid of the annoying orange
+            default: "" // let's get rid of the annoying orange
         },
         backgroundImage: {
             type: 'string',
