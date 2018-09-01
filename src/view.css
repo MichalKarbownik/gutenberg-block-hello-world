@@ -17,4 +17,5 @@
 .wp-block-firstgutyblocks-hero-image .content {
     position: relative;
     z-index: 1;
+    font-weight: normal !important;
 }
