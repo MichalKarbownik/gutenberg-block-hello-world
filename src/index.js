@@ -20,6 +20,10 @@ registerBlockType('firstgutyblocks/hero-image', {
         backgroundImage: {
             type: 'string',
             default: null, // no image by default!
+        },
+        overlayColor: { // new!
+            type: 'string',
+            default: 'orange'
         }
     },
 
